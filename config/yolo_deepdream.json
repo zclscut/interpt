@@ -1,0 +1,17 @@
+{
+    "config": null,
+    "model": "yolov5",
+    "mpath": "githubs/yolov5",
+    "wpath": "githubs/yolov5/weights/yolov5s.pt",
+    "ifolder": "githubs/yolov5/data/images",
+    "ifile": "dog",
+    "vpath": "outputs/objectDetection/yolov5/test/deepdream",
+    "vmethod": "deepdream",
+    "pyramid_size": 3,
+    "pyramid_ratio": 2,
+    "gradient_ascent_epochs": 10,
+    "deepdream_lr": 0.015,
+    "smoothing_coefficient": 0.5,
+    "upper_img_bound": 0.9,
+    "lower_img_bound": 0.1
+}
