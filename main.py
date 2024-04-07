@@ -28,12 +28,12 @@ def parse_args():
 
 
     # path_config
-    parser.add_argument('--mpath',action='store', type=str, default='githubs/yolov5',help='relative path of model')
-    parser.add_argument('--wpath',action='store', type=str, default='githubs/yolov5/weights/yolov5s.pt',help='relative path of weight')
-    parser.add_argument('--ifolder',action='store', type=str, default='githubs/yolov5/data/images',help='relative folder path of image needs being processed')
-    parser.add_argument('--ifile',action='store', type=str, default='dog',help='file name(wo .jpg etc) of image needs being processed,typically the class name, also the save folder of visualized results')
-    parser.add_argument('--vpath','--spath',action='store', type=str, default='outputs/objectDetection/yolov5/layercam',help='relative save path of visualized image')
-    parser.add_argument('--vmethod',action='store', type=str, default='layercam',help='visualized method')
+    parser.add_argument('--mpath','-mp',action='store', type=str, default='githubs/yolov5',help='relative Path of Model')
+    parser.add_argument('--wpath','-wp',action='store', type=str, default='githubs/yolov5/weights/yolov5s.pt',help='relative Path of Weight')
+    parser.add_argument('--ifolder','-ifo',action='store', type=str, default='githubs/yolov5/data/images',help='relative Folder path of Image needs being processed')
+    parser.add_argument('--ifile','-ifi',action='store', type=str, default='dog',help='File name(wo .jpg etc) of Image needs being processed,typically the class name, also the save folder of visualized results')
+    parser.add_argument('--vpath','--spath','-vp','-sp',action='store', type=str, default='outputs/objectDetection/yolov5/layercam',help='relative Save Path of Visualized image')
+    parser.add_argument('--vmethod','-vm',action='store', type=str, default='layercam',help='Visualized Method')
     
     # deepdream_config
     parser.add_argument('--pyramid_size',action='store', type=int, default=3,help='pyramid_size in deepdream')
@@ -50,7 +50,7 @@ def parse_args():
 
 
     parser.add_argument('--is_channel',action='store_true',help='is visualize per channel')
-    parser.add_argument('--channel',action='store', type=int, default=0,help='')
+    parser.add_argument('--channel',action='store', type=int, default=0,help='enable when is_channel is true')
 
 
 

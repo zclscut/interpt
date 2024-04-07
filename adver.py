@@ -35,13 +35,15 @@ def parse_args():
     parser.add_argument('--model',action='store', type=str, default='yolov5',help='model')
 
 
+
+
     # path_config
-    parser.add_argument('--mpath',action='store', type=str, default='githubs/yolov5',help='relative path of model')
-    parser.add_argument('--wpath',action='store', type=str, default='githubs/yolov5/weights/yolov5s.pt',help='relative path of weight')
-    parser.add_argument('--ifolder',action='store', type=str, default='githubs/yolov5/data/images',help='relative folder path of image needs being processed')
-    parser.add_argument('--ifile',action='store', type=str, default='dog',help='file name(wo .jpg etc) of image needs being processed,typically the class name, also the save folder of visualized results')
-    parser.add_argument('--apath','--spath',action='store', type=str, default='githubs/yolov5/data/images/fgsm',help='relative save path of adversarial image')
-    parser.add_argument('--amethod',action='store', type=str, default='fgsm',help='adversarial method')
+    parser.add_argument('--mpath','-mp',action='store', type=str, default='githubs/yolov5',help='relative Path of Model')
+    parser.add_argument('--wpath','-wp',action='store', type=str, default='githubs/yolov5/weights/yolov5s.pt',help='relative Path of Weight')
+    parser.add_argument('--ifolder','-ifo',action='store', type=str, default='githubs/yolov5/data/images',help='relative Folder path of Image needs being processed')
+    parser.add_argument('--ifile','-ifi',action='store', type=str, default='dog',help='File name(wo .jpg etc) of Image needs being processed,typically the class name, also the save folder of visualized results')
+    parser.add_argument('--apath','--spath','-ap','-sp',action='store', type=str, default='githubs/yolov5/data/images/fgsm',help='relative Save Path of Adversarial image')
+    parser.add_argument('--amethod','-am',action='store', type=str, default='fgsm',help='Adversarial Method')
     
 
 
