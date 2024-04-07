@@ -41,7 +41,7 @@ def parse_args():
     parser.add_argument('--ifolder',action='store', type=str, default='githubs/yolov5/data/images',help='relative folder path of image needs being processed')
     parser.add_argument('--ifile',action='store', type=str, default='dog',help='file name(wo .jpg etc) of image needs being processed,typically the class name, also the save folder of visualized results')
     parser.add_argument('--apath','--spath',action='store', type=str, default='githubs/yolov5/data/images/fgsm',help='relative save path of adversarial image')
-    parser.add_argument('--amethod','--smethod',action='store', type=str, default='fgsm',help='adversarial method')
+    parser.add_argument('--amethod',action='store', type=str, default='fgsm',help='adversarial method')
     
 
 
@@ -191,6 +191,7 @@ def adver(args,model,img):
             x_adv = torch.clamp(x_adv, x_val_min, x_val_max)
             x_adv = Variable(x_adv.data, requires_grad=True)
 
+
         x_adv=x_adv.squeeze(0)
         x_adv = np.uint8(x_adv.detach().cpu().numpy()* 255)
         x_adv=np.transpose(x_adv, (1, 2, 0))
@@ -199,7 +200,9 @@ def adver(args,model,img):
             os.makedirs(adv_save_folder)
         adv_save_path=os.path.join(os.getcwd(),args.apath,'iter{}/{}.jpg'.format(iteration,img_name))
     
-
+    else:
+        print('args.amethod error')
+        assert False
 
     
     print(cv.imwrite(adv_save_path,x_adv))
