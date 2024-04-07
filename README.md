@@ -21,12 +21,12 @@
     python main.py --vmethod deepdream --spath=outputs/objectDetection/yolov5/deepdream --ifile=zero 
     ```
 - 样本攻击
-  -  fgsm样本攻击
+  - fgsm样本攻击
     ```
     python adver.py --amethod fgsm --ifile dog --spath githubs/yolov5/data/images/fgsm
     ```
-  -  ifgsm样本攻击，迭代3次，默认是2次
+  - ifgsm样本攻击，迭代3次，默认是2次
     ```
-    python adver.py --amethod ifgsm --ifile dog --spath githubs/yolov5/data/images/test/ifgsm --iter 3
+    python adver.py --amethod ifgsm --ifile dog --spath githubs/yolov5/data/images/ifgsm --iter 3
     ```
 
