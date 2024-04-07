@@ -3,6 +3,7 @@ import torch.nn as nn
 import yaml
 from tqdm import tqdm
 from torch.nn import functional as F
+import torchvision
 import numpy as np
 import os
 from .algorithm import CascadeGaussianSmoothing,ActivationsAndGradients
